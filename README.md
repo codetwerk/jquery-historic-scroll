@@ -13,3 +13,11 @@ You can use the defaults and just call **$.historic()** with elements containing
 **attribute**: the string to use for defining the URL query string to be appended and the element to check for on scroll when it is fully in the DOM. (default: data-history)
 
 **cssSelector**: the elements to use in the DOM (default: [data-history])
+
+### Using Options
+$.historic({
+  callback: whatever,
+  speed: realFast,
+  attribute: 'data-awesomesauce',
+  cssSelector: '.thangy-thangs'
+});
