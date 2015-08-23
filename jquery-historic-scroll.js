@@ -17,7 +17,10 @@
           while (i < len) {
             if (isScrolledIntoView(elements[i])) {
               var queryString = "?" + elements[i].getAttribute(settings.attribute);
-              if (window.location.search === queryString) continue; // if its already set, continue to check next element
+              if (window.location.search === queryString) {
+                i++;
+                continue; // if its already set, break
+              }
               // otherwise update history then break out
               window.history.pushState(null, null, queryString);
               break;
